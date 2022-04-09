@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './page_indicator.dart';
 
 class StepForm extends StatefulWidget {
   @override
@@ -50,6 +51,9 @@ class _StepFormState extends State<StepForm> {
             onPressed: () => _changeStep(false),
             child: Text('Anterior'),
           ),
+          pageIndicator(_page == 0),
+          pageIndicator(_page == 1),
+          pageIndicator(_page == 2),
           TextButton(
             onPressed: () => _changeStep(true),
             child: Text('Próximo'),
